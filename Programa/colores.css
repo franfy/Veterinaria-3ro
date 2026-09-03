@@ -1,0 +1,111 @@
+/* ============================================================
+   ARCHIVO: estilos.css
+   Veterinaria El Sabiá - Paleta de colores y estilos personalizados
+   ============================================================
+   
+   IMPORTANTE: este archivo asume que en tu HTML ya tenés cargado:
+   1. Bootstrap 5.3.8 (CSS)
+   2. Las fuentes de Google Fonts: Playfair Display y Poppins
+   
+   Ese link va en el <head> del HTML, no acá. Ver instrucciones 
+   al final de este archivo.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. VARIABLES DE COLOR
+   Colores sacados del logo real de la veterinaria.
+   Definirlos como variables permite reutilizarlos en todo el 
+   sitio y cambiarlos en un solo lugar si hace falta ajustar 
+   la paleta más adelante.
+------------------------------------------------------------ */
+:root {
+  --rojo-sabia: #b9342b;
+  --rojo-sabia-oscuro: #96271f;
+  --verde-sabia: #7f9e8a;
+  --verde-sabia-oscuro: #64826f;
+  --negro-sabia: #262625;
+}
+
+/* ------------------------------------------------------------
+   2. TIPOGRAFÍAS
+------------------------------------------------------------ */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.fuente-marca {
+  font-family: "Playfair Display", serif;
+}
+
+/* ------------------------------------------------------------
+   3. CLASES DE FONDO (background-color)
+------------------------------------------------------------ */
+.bg-rojo-sabia {
+  background-color: var(--rojo-sabia);
+}
+
+.bg-verde-sabia {
+  background-color: var(--verde-sabia);
+}
+
+/* ------------------------------------------------------------
+   4. CLASES DE TEXTO (color)
+------------------------------------------------------------ */
+.text-rojo-sabia {
+  color: var(--rojo-sabia);
+}
+
+.text-verde-sabia {
+  color: var(--verde-sabia);
+}
+
+.text-negro-sabia {
+  color: var(--negro-sabia);
+}
+
+/* ------------------------------------------------------------
+   5. BOTONES PERSONALIZADOS
+   Incluyen su propio estado :hover (cuando el mouse pasa por 
+   encima), usando la variante "oscuro" de cada color para dar 
+   sensación de profundidad/interacción.
+------------------------------------------------------------ */
+.btn-rojo-sabia {
+  background-color: var(--rojo-sabia);
+  border-color: var(--rojo-sabia);
+  color: #fff;
+}
+.btn-rojo-sabia:hover {
+  background-color: var(--rojo-sabia-oscuro);
+  border-color: var(--rojo-sabia-oscuro);
+  color: #fff;
+}
+
+.btn-verde-sabia {
+  background-color: var(--verde-sabia);
+  border-color: var(--verde-sabia);
+  color: #fff;
+}
+.btn-verde-sabia:hover {
+  background-color: var(--verde-sabia-oscuro);
+  border-color: var(--verde-sabia-oscuro);
+  color: #fff;
+}
+
+.border-rojo-sabia {
+  border-color: var(--rojo-sabia) !important;
+}
+
+/* ------------------------------------------------------------
+   6. LINKS DEL NAVBAR
+   Efecto hover suave: fondo blanco semi-transparente + bordes
+   redondeados tipo "pill" cuando el mouse pasa por encima.
+------------------------------------------------------------ */
+.nav-link-sabia {
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+.nav-link-sabia:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+}
