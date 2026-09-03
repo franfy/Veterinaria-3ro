@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Sensilla</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            margin: 0 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #3498db;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .main-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        .main-content h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .sidebar {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .sidebar h2 {
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 5px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Página Sensilla</h1>
+        <p>Un sitio web simple pero efectivo</p>
+    </header>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Portafolio</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <div class="main-content">
+                <h2>Bienvenido a mi sitio web</h2>
+
+                <div class="card">
+                    <h3>¿Quiénes somos?</h3>
+                    <p>Somos una pequeña empresa dedicada a crear soluciones digitales simples pero efectivas para nuestros clientes. Nuestra misión es ayudar a las personas y pequeñas empresas a
+establecer su presencia en línea de manera profesional y económica.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Nuestros servicios</h3>
+                    <p>Ofrecemos servicios como creación de sitios web, diseño gráfico, posicionamiento web y consultoría digital. Todos nuestros servicios están diseñados para ser accesibles y efectivos
+para cualquier negocio.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Testimonios</h3>
+                    <p>"La página web que crearon para nosotros es increíble. Es simple, limpia y ha ayudado a nuestro negocio a crecer en línea de manera significativa." - Juan Pérez, Gerente de Tienda
+Online</p>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <h2>Noticias y Actualizaciones</h2>
+
+                <div class="card">
+                    <h3>Actualización importante</h3>
+                    <p>Lanzamos una nueva versión de nuestro sitio web con mejoras en la experiencia de usuario y rendimiento. Estos cambios están diseñados para hacer tu visita más rápida y agradable.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Eventos próximos</h3>
+                    <p>Próximamente celebraremos una nueva sesión de capacitación sobre creación de sitios web simples. ¡Asegúrate de estar al tanto de estas fechas!</p>
+                </div>
+
+                <div class="card">
+                    <h3>Publicación de blog</h3>
+                    <p>Nuestro último artículo habla sobre cómo utilizar colores en una página web para mejorar la experiencia del usuario. ¡No te lo pierdas!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-item">
+                <div class="feature-icon">✓</div>
+                <h3>Diseño Responsivo</h3>
+                <p>Nuestra página se adapta perfectamente a cualquier dispositivo, desde móviles hasta computadoras de escritorio.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <h3>Rendimiento Óptimo</h3>
+                <p>Código limpio y optimizado para garantizar una carga rápida y una experiencia fluida para los usuarios.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">🎨</div>
+                <h3>Estética Moderna</h3>
+                <p>Interfaz elegante y minimalista que sigue las tendencias actuales del diseño web.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">🔍</div>
+                <h3>Contenido Estructurado</h3>
+                <p>Información bien organizada para facilitar la navegación y el entendimiento.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Mi Página Sensilla. Todos los derechos reservados.</p>
+        <p>Contáctanos: <a href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a></p>
+    </footer>
+</body>
+</html>
