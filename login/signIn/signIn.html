@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNIN</title>
+    <link rel="stylesheet" href="signIn.css">
+</head>
+
+<body>
+
+    <form class="formularioSignIn" id="formularioSignIn" action="signIn.php" method="post">
+        
+        <!--CI-->
+        <div class="container">
+            <input name="inputCI" id="inputCI" type="text" placeholder=" " required>
+            <label id="labelCI" for="inputCI">Cedula de identidad</label>
+        </div>
+
+        <!--Email-->
+        <div class="container">
+            <input name="inputEmail" id="inputEmail" type="email" placeholder=" " required>
+            <label id="labelEmail" for="inputEmail">Correo electronico</label>
+        </div>
+
+        <!--Contrasena-->
+        <div class="container">
+            <input name="inputPass" id="inputPass" type="password" placeholder=" " required>
+            <label id="labelPass" for="inputPass">Contraseña</label>
+        </div>
+
+        <!--Nombre-->
+        <div class="container">
+            <input name="inputName" id="inputName" type="text" placeholder=" ">
+            <label id="labelName" for="inputName">Nombre</label>
+        </div>
+
+        <!--Apellido-->
+        <div class="container">
+            <input name="inputApe" id="inputApe" type="text" placeholder=" ">
+            <label id="labelApe" for="inputApe">Apellido</label>
+        </div>
+
+        <!--Telefono-->
+        <div class="container">
+            <input name="inputTel" id="inputTel" type="text" placeholder=" ">
+            <label id="labelTel" for="inputTel">Telefono</label>
+        </div>
+
+        <!--Contenido de los botones-->
+        <div class="containerButtons">
+            <button id="btnSignIn" type="button" href="login/login.html">Cancelar</button>
+            <button id="btnLogIn" type="submit">Registrar</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
