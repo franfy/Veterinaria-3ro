@@ -1,39 +1,17 @@
 :root {
-    --rojo-sabia: #b9342b;
-    --rojo-oscuro-sabia: #96271f;
-    --verde-sabia: #7f9e8a;
-    --verde-oscuro-sabia: #64826f;
-    --negro-sabia: #262625;
-}
+    --rojo-sabia: #ee5244;
+    --rojo-oscuro-sabia: #b9392d;
 
-.bg-rojo-sabia{
-    background-color: var(--rojo-sabia);
-}
+    --marron-sabia: #4a3114;
 
-.sidebar .nav-link {
-    border-radius: 50px;
-    padding: 8px 16px;
-    margin-bottom: 6px;
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color 0.2s ease;
-}
+    --verde-sabia: #b3d4c0;
+    --verde-oscuro-sabia: #70947e;
 
-.sidebar .nav-link:hover,
-.sidebar .nav-link:focus {
-    background-color: rgba(255, 255, 255, 0.25);
-    color: #fff;
-}
+    --gris-claro-sabia: #909090;
+    --gris-sabia: #676767;
+    --gris-oscuro-sabia: #474747;
 
-.sidebar .dropdown-item {
-    border-radius: 50px;
-    padding: 6px 16px;
-    margin-bottom: 4px;
-}
-
-.sidebar .dropdown-item:hover,
-.sidebar .dropdown-item:focus {
-    background-color: #e9ecef;
+    --negro-sabia: #0f0e0e;
 }
 
 html, body {
@@ -41,35 +19,155 @@ html, body {
     margin: 0;
 }
 
-.d-flex {
-    min-height: 100vh;
+body {
+    display: flex;
+    flex: 1;
 }
 
-.sidebar {
+aside {
+    background: linear-gradient(90deg, var(--verde-sabia), var(--verde-oscuro-sabia));
     display: flex;
+    flex-direction: column;
+    width: 220px;
+    padding: 10px;
+}
+
+main {
+    background-color: var(--verde-oscuro-sabia);
+    display: flex;
+    flex: 1;
     flex-direction: column;
 }
 
-.sidebar > .p-3 {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+header {
+    background-color: var(--rojo-oscuro-sabia);
+}
+
+
+
+
+
+
+
+/*DROPDOWN-MENU
+CREDITOS= https://www.youtube.com/watch?v=VQWu4e6agPc 
+(un tipazo)*/
+.dropdown{
+    /*Solo toma la forma del boton*/
+    display: block;
+}
+
+
+.dropdown button {
+    /*Boton que despliega la lista de funciones*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: var(--rojo-sabia);
+    border-radius: 15px;
+    color: var(--negro-texto);
+    padding: 10px 15px;
+    border: none;
     width: 100%;
+    cursor: pointer
 }
 
-.sidebar-middle {
-    flex-grow: 1;
-    overflow-y: auto;
+
+.dropdown a {
+    /*Forma en la que se muestra el contenido de cada <a> dentro de dropdown*/
+    display: block;
+    color: var(--negro-texto);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 15px;
 }
 
-.sidebar-bottom {
+
+.dropdown .content{
+    /*Forma en la que se muestra cada link dentro de dropdown (sin hacer nada)*/
+    display: none;
+    position: absolute;
+    background-color: var(--verde-sabia);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px var(--negro-texto);
+    border-radius: 15pxpx;
+}
+
+
+.dropdown:hover .content{
+    /*Hace que se muestre el contenido al posar el cursor encima del boton del dropdown*/
+    display: block;
+    border: 2px solid var(--negro-sabia);
+}
+
+
+.dropdown:hover button{
+    /*Forma en la que se va a mostrar el boton del dropdown cuando se ponga el cursor encima*/
+    background-color: var(--rojo-oscuro-sabia);
+    border-radius: 15px;
+}
+
+
+.dropdown a:hover {
+    /*Forma en la que se va a mostrar cada funcion cuando se le ponga el cursor encima*/
+    background-color: var(--verde-oscuro-sabia);
+    border: 2px solid var(--gris-sabia);
+}
+/*Fin del dropdown-menu*/
+
+
+.sabia-logo {
+    margin-left: 16%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    height: 150px;
+    border-radius: 25px;
+}
+
+
+.top-aside {
+    
+    border-radius: 35px;
+    margin-bottom: 10px;
+}
+
+
+.bottom-aside {
+    background-color: var(--gris-oscuro-sabia);
+    border-radius: 35px;
     margin-top: auto;
 }
 
-.nav-item{
-    margin-bottom: 2%;
+
+.bottom-aside button {
+    height: 25px;
+    width: 120px;
+
+    border: none;
+    border-radius: 15px;
+
+    background-color: var(--rojo-sabia);
 }
 
-body{
-    font-family: "Poppins", sans-serif;
+
+.bottom-aside button:hover {
+    background-color: var(--rojo-boton-hover);
+}
+
+
+.bottom-aside button:active {
+    background-color: var(--rojo-boton-active);
+}
+
+
+.contanier-vertical {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+
+.contanier-horizontal {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
 }

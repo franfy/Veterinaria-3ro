@@ -1,13 +1,18 @@
 :root{
     --rojo: #89241c;
     --rojo-fondo: #54100b;
-    --verde-input: #a4ccb2;
-    --verde-boton: #74a285;
-    --blanco-texto: #ffffff;
-    --negro-texto: #000000;
-    --azul-texto: #067bbe;
     --rojo-warning-input: #ff0000;
     --rojo-warning-texto: #ff4d00;
+    
+    --verde-input: #a4ccb2;
+    --verde-boton: #74a285;
+
+    --blanco-texto: #ffffff;
+    
+    --negro-texto: #000000;
+
+    --azul-fondo: #84aaff;
+    --azul-oscuro: #067bbe;
 }
 
 /*Configuracion del body principal.*/
@@ -16,137 +21,84 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    background-color: var(--rojo-fondo);
+    background-color: var(--azul-fondo);
 }
 /*Fin de la configuracion del body principal*/
-
 
 /*Inicio de la configuracion del componente main.*/
 main {
     margin: auto;
-}
+    background-color: var(--blanco-texto);
+    border-radius: 30px;
 
-h1, p {
-    color: var(--blanco-texto);
-    font-family: sans-serif;
-}
-
-.containerLogin {
-    background-color: var(--rojo); /*colores del fondo*/
-    border-radius: 30px; /*bordes en pixeles*/
-
-    width: 65vw; /*vw = viewport width*/
-    height: 60vh; /*vh = viewport height*/
+    min-width: 75vw; /*vw = viewport width (ancho)*/
+    min-height: 70vh; /*vh = viewport height (alto)*/
 
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
+/*Final de configuracion del main*/
 
-.formularioLogin {
+/*Inicio de configuracion de los botones*/
+button {
+    border: none;
+    border-radius: 15px;
+    background-color: #067bbe;
+}
+/*Final de configuracion de los botones*/
+
+/*Inicio de configuracion de noscript*/
+noscript {
+    margin-left: 10%;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+
     flex: 1;
-    display: none; /*Se cambia a flex via JS al detectar la existencia de JS*/
+    justify-content: space-between;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
 }
+/*Final de configuracion de noscript*/
 
-.divSignIn {
+
+
+.containerVertical {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.containerHorizontal {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.containerLogin {
+    align-items: center;
+    justify-content: center;
+}
+
+.containerSabia {
+    padding: 30px;
+    max-height: 5vh;
+    max-width: 20vw;
+}
+
+.imgSabia {
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    display: block;
+}
+
+.iframeSignin {
     display: none;
 }
 
-noscript {
-    font-size: large;
-}
-
-.sabiaLogo {
-    padding-left: 3.5%;
-    padding-bottom: 20%;
-    height: 40%;
-    border-radius: 15%;
-
-    min-width: 40%;
-}
-
-.sabiaImg{
-    height: 100%;
-    border-radius: 25px;
-}
-
-input {
-    background-color: var(--verde-input);
-    
-    width: 20vw;
-    height: 5vh;
-    
-    border: 5px;
-    border-color: var(--verde-input);
-    border-radius: 10px;
-}
-
-button {
-    background-color: var(--verde-boton);
-
-    font-size: 1vw;
-
-    width: 8vw;
-    height: 3vw;
-
-    border-radius: 50px;
-    border: none;
-
-    margin-top: 20px;
-}
-
-/*Generado por IA (claude) pero modificado a gusto del programador*/
-/*Seccion: texto movible*/
-/*INFO: Hace que al momento de tener el focus en el input, el texto del interior se mueva a la parte superior (facha)*/
-.containerPass,
-.containerEmail {
-    position: relative;
-    max-width: 340px;
-}
-
-.containerPass input,
-.containerEmail input {
-    width: 5vw;
-    height: 44px;
-    min-width: 20vw;
-    min-height: 6vh;
-    padding: 4 14px;
-
-    background: transparent;
-    border: 1px solid;
-    border-color: var(--negro-texto);
-    border-radius: 8px;
-    color: #ffffff;
-    font-size: 15px;
-}
-
-.containerPass label,
-.containerEmail label {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 0 4px;
-    color: var(--negro-texto);
-    font-size: 15px;
-    font-family: sans-serif;
-    pointer-events: none;
-    transition: all 0.30s ease;
-    background: transparent;
-}
-
-/* Cuando está enfocado O ya tiene contenido, sube el label */
-.containerPass input:focus + label,
-.containerPass input:not(:placeholder-shown) + label,
-.containerEmail input:focus + label,
-.containerEmail input:not(:placeholder-shown) + label {
-    top: 0;
-    font-size: 12px;
-    color: #ffffff;
-    background: var(--rojo-fondo); /* debe coincidir con el fondo detrás del label */
-    border-radius: 5px;
-}
-/*Fin text movible*/

@@ -14,72 +14,58 @@
 <!--Cuerpo de la pagina-->
 <body>
 
-    <!--Encabezado de la pagina-->
-    <header>
-        
-    </header>
-
-
-
     <!--Contenido principal-->
     <main>
 
-        <!--Contenido del login-->
-        <div class="containerLogin">
+        <!--Contenedor principal, horizontal-->
+        <div class="containerHorizontal">
             
-            <!--Imagen de la veterinaria-->
-            <div class="sabiaLogo">
-                <a href="/PaginaPrincipal.html" title="Volver a la pagina principal">
-                    <img class="sabiaImg" src="Logo.png">
+
+            <!--Contenedor de la imagen, vertical-->
+            <div class="containerVertical containerSabia" id="containerSabia">
+                <a href="/index.html" title="Volver al menu principal">
+                    <img class="imgSabia" src="/vet.png">
+    
                 </a>
-                <h1>Accede a tu cuenta</h1>
-                <p>Acceder a tu cuenta en la veterinaria</p>
+
+                <!--Contenedor del texto-->
+                <div class="containerVertical">
+                    <h1>Inicie sesion en su cuenta</h1>
+                    <p>Ingrese usuario y contraseña para iniciar sesión en su cuenta de la veterinaria</p>
+                </div>
             </div>
 
-            <!--Contenido a mostrar si JavaScript no esta disponible-->
-            <noscript>
+            <noscript class="containerVertical">
                 <h1>¡Actualmente no es posible iniciar sesion!</h1>
-                <p>Active el JavaScript del navegador para poder proseguir</p>
+                <p>Active JavaScript en su navegador para poder proseguir</p>
             </noscript>
-            
-            <!--Formulario del inicio de sesion-->
-            <form class="formularioLogin" id="formularioLogin" action="login.php" method="post">
-                
-                <!--Label y contenido del email-->
-                <div class="containerEmail">
-                    <input name="inputEmail" id="inputEmail" type="email" placeholder=" " required>
-                    <label id="labelEmail" for="inputEmail">Email del usuario</label>
+
+            <!--Contenido para el inicio de sesion-->
+            <form class="containerVertical containerLogin" id="containerLogin">
+
+                <!--Contenido para el email-->
+                <div class="containerVertical containerInput">
+                    <input name="inputEmail" id="inputEmail" type="email" placeholder="Email" required>
                 </div>
 
-                <!--Label y contenido de la contraseña-->
-                <div class="containerPass">
-                    <input name="inputPass" id="inputPass" type="password" placeholder=" " required>
-                    <label id="labelPass" for="inputPass">Contraseña del usuario</label>
+                <!--Contenido para la contraseña-->
+                <div class="containerVertical containerInput">
+                    <input name="inputPss" id="inputPass" type="password" placeholder="Contraseña" required>
+                </div>
+
+                <div class="containerHorizontal containerBotones">
+                    <button id="btnSignin" type="button">Crear cuenta</button>
+                    <button id="btnLogin" type="submit">Iniciar sesion</button>
                 </div>
                 
-                <!--Resultado tras intentar iniciar sesion y fallar-->
-                <p id="resultadoLogin">¡No se ha podido iniciar sesion!</p>
-
-                <!--Contenido de los botones-->
-                <div class="containerButtons">
-                    <button id="btnSignIn" type="button">Crear cuenta</button>
-                    <button id="btnLogIn" type="submit">Iniciar sesion</button>
-                </div>
             </form>
 
-            <!--Formulario para el registro del usuario-->
-            <div class="divSignIn" id="divSignIn"></div>
+            <!--Entorno aislado para signIn.html y su css-->
+            <iframe class="iframeSignin" id="iframeSignin" src="signIn/signIn.html" frameborder="0" width="100%" height="100%"></iframe>
 
         </div>
 
     </main>
-
-
-
-    <!--Pie de pagina-->
-    <footer>
-        
-    </footer>
 
     <script src="login.js"></script>
 </body>
