@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PawAdmin · Panel de administración</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="overlay" class="overlay"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="brand">
+    <span class="brand-icon">🐾</span> PawAdmin
+  </div>
+
+  <nav class="nav-scroll">
+    <div class="nav-section-label">GESTIÓN</div>
+    <a href="#" class="side-link active" data-target="usuario">
+      <span class="icon">👤</span> Usuario
+    </a>
+    <a href="#" class="side-link" data-target="productos">
+      <span class="icon">📦</span> Productos
+    </a>
+    <a href="#" class="side-link" data-target="compras">
+      <span class="icon">🛒</span> Compras
+    </a>
+    <a href="#" class="side-link" data-target="animales">
+      <span class="icon">🐾</span> Animales
+    </a>
+
+    <div class="nav-section-label">OPERACIÓN</div>
+    <a href="#" class="side-link" data-target="servicios">
+      <span class="icon">✂️</span> Servicios
+    </a>
+    <a href="#" class="side-link" data-target="guarderia">
+      <span class="icon">🏠</span> Guardería
+    </a>
+    <a href="#" class="side-link" data-target="agendas">
+      <span class="icon">📅</span> Agendas
+    </a>
+
+    <div class="nav-section-label">SISTEMA</div>
+    <a href="#" class="side-link" data-target="backups">
+      <span class="icon">☁️</span> Copias de seguridad
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <a href="#" class="logout-link" id="logoutBtn">
+      <span class="icon">🚪</span> Cerrar sesión
+    </a>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<div class="main">
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn mobile-only" id="toggleSidebar" aria-label="Abrir menú">☰</button>
+      <div class="search-box">
+        <span class="icon">🔍</span>
+        <span>Buscar clientes, animales, pedidos…</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <span class="icon-btn">🔔</span>
+      <div class="avatar">AR</div>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <!-- USUARIO -->
+    <section class="section-view active" id="view-usuario">
+      <h1 class="page-title">Hola, Andrea</h1>
+      <p class="page-subtitle">Este es el resumen de hoy en la clínica y tienda.</p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon bg-amber">🐾</div>
+          <div>
+            <div class="stat-value">128</div>
+            <div class="stat-label">Animales registrados</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon bg-green">🏠</div>
+          <div>
+            <div class="stat-value">14</div>
+            <div class="stat-label">En guardería hoy</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon bg-purple">📅</div>
+          <div>
+            <div class="stat-value">9</div>
+            <div class="stat-label">Citas agendadas</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon bg-red">🛒</div>
+          <div>
+            <div class="stat-value">$2,340</div>
+            <div class="stat-label">Ventas del día</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2 class="panel-title">Mi perfil</h2>
+        <div class="profile-row">
+          <div class="avatar avatar-lg">AR</div>
+          <div>
+            <div class="profile-name">Andrea Ramírez</div>
+            <div class="profile-meta">Administradora · andrea@pawadmin.com</div>
+          </div>
+        </div>
+        <p class="muted-text">Desde aquí podrás editar tus datos, cambiar tu contraseña y gestionar los permisos de otros usuarios del sistema.</p>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="section-view" id="view-productos">
+      <h1 class="page-title">Productos</h1>
+      <div class="panel">
+        <div class="panel-header">
+          <span class="muted-text">Catálogo de alimento, accesorios y medicamentos.</span>
+          <button class="btn btn-amber">+ Nuevo producto</button>
+        </div>
+        <table class="data-table">
+          <thead><tr><th>Producto</th><th>Categoría</th><th>Stock</th><th>Precio</th></tr></thead>
+          <tbody>
+            <tr><td>Alimento premium perro 15kg</td><td>Alimento</td><td>32</td><td>$45.00</td></tr>
+            <tr><td>Arena sanitaria para gato</td><td>Higiene</td><td>58</td><td>$12.50</td></tr>
+            <tr><td>Antipulgas spot-on</td><td>Salud</td><td>9</td><td>$18.90</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- COMPRAS -->
+    <section class="section-view" id="view-compras">
+      <h1 class="page-title">Compras</h1>
+      <div class="panel">
+        <span class="muted-text block-mb">Órdenes de compra a proveedores.</span>
+        <table class="data-table">
+          <thead><tr><th>Orden</th><th>Proveedor</th><th>Fecha</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td>#0231</td><td>NutriPet S.A.</td><td>08/09/2026</td><td><span class="badge badge-success">Recibida</span></td></tr>
+            <tr><td>#0232</td><td>VetSupply</td><td>09/09/2026</td><td><span class="badge badge-warning">En tránsito</span></td></tr>
+            <tr><td>#0233</td><td>Distribuidora Animal</td><td>10/09/2026</td><td><span class="badge badge-neutral">Pendiente</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ANIMALES -->
+    <section class="section-view" id="view-animales">
+      <h1 class="page-title">Animales</h1>
+      <div class="panel">
+        <span class="muted-text block-mb">Ficha de mascotas registradas y su historial clínico.</span>
+        <table class="data-table">
+          <thead><tr><th>Nombre</th><th>Especie</th><th>Dueño</th><th>Última visita</th></tr></thead>
+          <tbody>
+            <tr><td>Toby</td><td>Perro</td><td>Marcos Díaz</td><td>02/09/2026</td></tr>
+            <tr><td>Mishu</td><td>Gato</td><td>Laura Pineda</td><td>05/09/2026</td></tr>
+            <tr><td>Rocky</td><td>Perro</td><td>Elena Soto</td><td>07/09/2026</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section-view" id="view-servicios">
+      <h1 class="page-title">Servicios</h1>
+      <div class="cards-row">
+        <div class="panel">
+          <div class="service-icon">✂️</div>
+          <h3 class="panel-subtitle">Peluquería</h3>
+          <p class="muted-text">Baño y corte a domicilio o en tienda.</p>
+        </div>
+        <div class="panel">
+          <div class="service-icon">💉</div>
+          <h3 class="panel-subtitle">Consulta veterinaria</h3>
+          <p class="muted-text">Revisiones generales y vacunación.</p>
+        </div>
+        <div class="panel">
+          <div class="service-icon">🚚</div>
+          <h3 class="panel-subtitle">Entrega a domicilio</h3>
+          <p class="muted-text">Envío de productos y alimento.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUARDERIA -->
+    <section class="section-view" id="view-guarderia">
+      <h1 class="page-title">Guardería</h1>
+      <div class="panel">
+        <span class="muted-text block-mb">Mascotas hospedadas actualmente.</span>
+        <table class="data-table">
+          <thead><tr><th>Nombre</th><th>Ingreso</th><th>Salida prevista</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td>Toby</td><td>08/09/2026</td><td>12/09/2026</td><td><span class="badge badge-success">Hospedado</span></td></tr>
+            <tr><td>Nala</td><td>09/09/2026</td><td>11/09/2026</td><td><span class="badge badge-success">Hospedado</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- AGENDAS -->
+    <section class="section-view" id="view-agendas">
+      <h1 class="page-title">Agendas</h1>
+      <div class="panel">
+        <span class="muted-text block-mb">Citas programadas para hoy.</span>
+        <ul class="list">
+          <li class="list-item"><span>10:00 — Consulta: Rocky</span><span class="muted-text">Dra. Peña</span></li>
+          <li class="list-item"><span>11:30 — Vacunación: Mishu</span><span class="muted-text">Dra. Peña</span></li>
+          <li class="list-item"><span>15:00 — Peluquería: Toby</span><span class="muted-text">Equipo estética</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BACKUPS -->
+    <section class="section-view" id="view-backups">
+      <h1 class="page-title">Copias de seguridad</h1>
+      <div class="panel">
+        <div class="panel-header">
+          <span class="muted-text">Últimas copias generadas del sistema.</span>
+          <button class="btn btn-pine">☁ Generar copia ahora</button>
+        </div>
+        <table class="data-table">
+          <thead><tr><th>Fecha</th><th>Tamaño</th><th>Estado</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>10/09/2026 03:00</td><td>128 MB</td><td><span class="badge badge-success">Completa</span></td><td class="download-cell">⬇</td></tr>
+            <tr><td>09/09/2026 03:00</td><td>126 MB</td><td><span class="badge badge-success">Completa</span></td><td class="download-cell">⬇</td></tr>
+            <tr><td>08/09/2026 03:00</td><td>124 MB</td><td><span class="badge badge-success">Completa</span></td><td class="download-cell">⬇</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- Modal cierre de sesión -->
+<div class="modal-backdrop" id="logoutModal">
+  <div class="modal-box">
+    <div class="modal-icon">🚪</div>
+    <h2 class="modal-title">¿Cerrar sesión?</h2>
+    <p class="muted-text">Volverás a la pantalla de inicio de sesión.</p>
+    <div class="modal-actions">
+      <button class="btn btn-light" id="cancelLogout">Cancelar</button>
+      <button class="btn btn-danger">Cerrar sesión</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
