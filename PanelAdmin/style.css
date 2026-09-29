@@ -81,8 +81,6 @@ aside nav a {
 
     color: var(--gris-text);
 
-    border-left: 4px solid transparent;
-
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 24px;
@@ -99,7 +97,7 @@ aside nav a:hover {
 
 aside nav .active {
     background-color: var(--verde-active);
-    border-left-color: var(--ambar);
+    border-left: 5px solid var(--ambar);
 }
 
 aside .aside-extreme div {
@@ -121,6 +119,7 @@ aside nav a img {
     margin-bottom: 12px;
     margin-left: 16px;
     margin-right: 16px;
+
 
     display: flex;
     flex-direction: column;
@@ -163,7 +162,12 @@ aside .aside-extreme:last-child img {
     transform: translateY(3px);
 }
 
+/*
+.dropdown {
+    display: flex;
+    flex-direction: column;
 
-
-
+    border: 2px solid var(--verde-border);
+    border-radius: 5px;
+}*/
 

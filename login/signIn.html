@@ -3,13 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="login.css">
+
     <title>Registro</title>
-    <link rel="stylesheet" href="signIn.css">
 </head>
 
 <body>
 
-    
+    <a class="logo" href="/index.html" title="Volver a la pagina principal">
+        <img src="/media/logo.png">
+    </a>
+
+    <form action="signIn.php">
+
+        <div class="container">
+
+            <!--Contenedor para la cedula-->
+            <div class="input-box">
+                <input type="text" placeholder=" " title="Campo obligatorio" required>
+                <label>Cedula de identidad *</label>
+                <img src="/media/id.svg">
+            </div>
+
+            <!--Contenedor para el email-->
+            <div class="input-box">
+                <input type="email" placeholder=" " title="Campo obligatorio" required>
+                <label>Email *</label>
+                <img src="/media/email.svg">
+            </div>
+
+            <!--Contenedor para la contraseña-->
+            <div class="input-box">
+                <input type="password" placeholder=" " title="Campo obligatorio" required>
+                <label>Contraseña *</label>
+                <img src="/media/password.svg">
+            </div>
+
+            <!--Contenedor para el nombre-->
+            <div class="input-box">
+                <input type="text" placeholder=" ">
+                <label>Nombre</label>
+                <img src="/media/name.svg">
+            </div>
+
+            <!--Contenedor para el apellido-->
+            <div class="input-box">
+                <input type="text" placeholder=" ">
+                <label>Apellido</label>
+                <img src="/media/name.svg">
+            </div>
+
+            <!--Contenedor para el telefono-->
+            <div class="input-box">
+                <input type="text" placeholder=" ">
+                <label>Telefono</label>
+                <img src="/media/phone.svg">
+            </div>
+        </div>
+
+        <div>
+            <button type="submit">Registrarse</button>
+
+            <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+        </div>
+
+    </form>
 
 </body>
 </html>

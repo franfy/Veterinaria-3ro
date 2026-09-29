@@ -1,52 +1,42 @@
 :root {
-    --cyan: #00ffff;
+    --verde-oscuro: #1b331b;
+    --verde-hover: #30773025;
+    --verde-active: #30773067;
+    --verde-border: #8ca014;
+    --verde-section: #000000;
+    --verde-text: #4a6a4a;
+
+    --blanco-text: #ffffff;
+
+    --amarillo-background: #eeffdd;
+    
+    --gris-text: #cccccc;
+    --gris-oscuro-text: #808080;
+    --gris-separator: #80808080;
 
     --ambar: #ffbf00;
 
-    --gris-fondo: #808080;
+    --rojo-text: #e1a186;
+    --rojo-button: #81432880;
 
-    --negro-texto: #000000;
+    --cyan-nav: #004176;
+
+    --negro-text: #101010;
 }
 
 body {
     margin: 0px;
-    background-color: var(--gris-fondo);
+    min-height: 100vh;
+
+    background-color: var(--amarillo-background);
 }
 
 header {
-    background-color: var(--cyan);
-
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
-header div {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
+    color: var(--blanco-text);
 
-header h3 {
-    display: flex;
-    flex: 1;
-
-    justify-content: center;
-}
-
-.header-top {
-    display: flex;
-    flex-direction: row;
-
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-
-.header-top h1 {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.header-top a {
-    position: absolute;
+    background-color: #1b331b;
 }

@@ -14,23 +14,32 @@
 <!--Cuerpo de la pagina-->
 <body>
 
-    <form action="">
+    <a class="logo" href="/index.html" title="Volver a la pagina principal">
+        <img src="/media/logo.png">
+    </a>
+    
+    
+    <form action="login.php">
 
         <div class="container">
             <div class="input-box">
-                <input type="email" placeholder=" " required>
-                <label>Correo electrónico</label>
+                <input name="inputEmail" type="email" placeholder=" " title="Ingrese su correo electronico para iniciar sesion" required>
+                <label>Email</label>
+                <img src="/media/email.svg">
             </div>
 
             <div class="input-box">
-                <input type="password" placeholder=" " required>
+                <input name="inputPass" type="password" placeholder=" " title="Ingrese su contraseña para iniciar sesion" required>
                 <label>Contraseña</label>
+                <img src="/media/password.svg">
             </div>
         </div>
 
-        <button type="submit">Login</button>
+        <div>
+            <button type="submit">Ingresar</button>
 
-        <p>No tienes cuenta? <a href="signIn.html">Registrate</a></p>
+            <p>¿No tienes cuenta? <a href="signIn.html">Registrate</a></p>
+        </div>
 
     </form>
 
