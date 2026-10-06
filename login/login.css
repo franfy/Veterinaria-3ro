@@ -17,6 +17,7 @@
     --gris-separator: #80808080;
 
     --ambar: #ffbf00;
+    --ambar-oscuro: #ae8301;
 
     --rojo-text: #e1a186;
     --rojo-button: #81432880;
@@ -59,7 +60,7 @@ body {
 form {
     background-color: var(--verde-oscuro);
 
-    height: 400px;
+    height: 440px;
 
     display: flex;
     flex-direction: column;
@@ -80,16 +81,46 @@ form p {
     text-align: center;
 }
 
+form p a {
+    color: var(--ambar);
+    transition: color 0.2s ease;
+}
+
+form p a:hover {
+    color: var(--ambar-oscuro);
+}
+
 button {
     height: 30px;
     width: 100%;
 
     border: none;
     border-radius: 15px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+    margin-bottom: 13px;
 }
 
 button:hover {
     cursor: pointer;
+}
+
+.forgot-box, p, a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.forgot-box {
+    display: flex;
+    justify-content: center;
+
+    margin: 14px 12px 14px 12px;
+}
+
+.forgot-box label, 
+.forgot-box input {
+    margin: 0px 8px 0px 8px;
 }
 
 .input-box {
@@ -105,6 +136,7 @@ button:hover {
     bottom: 4px;
 
     font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
     color: var(--gris-oscuro-text);
 
     pointer-events: none;
@@ -115,6 +147,7 @@ button:hover {
 .input-box input:not(:placeholder-shown) + label {
     bottom: 26px;
     font-size: small;
+    font-weight: bold;
     color: var(--gris-oscuro-text)
 }
 

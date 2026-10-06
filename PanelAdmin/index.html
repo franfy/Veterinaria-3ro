@@ -15,11 +15,8 @@
     
     <aside>
 
-        <div class="aside-extreme">
-            <div>
-                <!--<img src="arrowback.svg">-->
-                <label class="titulo">Panel de administración</label>
-            </div>
+        <div class="aside-top">
+            <label class="titulo">Panel de administración</label>
             <label class="subtitulo">Veterinaria el Sabia</label>
         </div>
 
@@ -27,43 +24,81 @@
 
             <!--Bienvenida/inicio del panel de administrador-->
             <label>BIENVENIDA</label>
-            <a href="#" class="side-link active"> <img src="/media/home.svg"> Inicio</a>
+            <a href="inicio/inicio.html" class="side-link active"> <img src="/media/home.svg"> Inicio</a>
           
+
             <!--Dropdown menus-->
+            <!--Usuarios-->
             <label>GESTION</label>
-            <a href="#" class="side-link"> <img src="/media/usuarios.svg"> Usuarios</a>
-
-            <!--<div class="dropdown">
+            <div class="dropdown">
                 <a href="#" class="side-link"> <img src="/media/usuarios.svg"> Usuarios</a>
-                <a href="#" class="side-link"> <img src="/media/usuarios.svg"> Empleados</a>
-                <a href="#" class="side-link"> <img src="/media/usuarios.svg"> Clientes</a>
-            </div>-->
+                <div class="content">
+                    <a href="#" class="side-link"> <img src="/media/usuarios.svg"> Usuarios</a>
+                    <a href="#" class="side-link"> <img src="/media/empleados.svg"> Empleados</a>
+                    <a href="#" class="side-link"> <img src="/media/usuarios.svg"> Clientes</a>
+                </div>
+            </div>
 
-            <a href="#" class="side-link"> <img src="/media/productos.svg"> Productos</a>
-            <a href="#" class="side-link"> <img src="/media/compras.svg"> Compras</a>
-            <a href="#" class="side-link"> <img src="/media/animales.svg"> Animales</a>
+            <!--Productos-->
+            <div class="dropdown">
+                <a href="#" class="side-link"> <img src="/media/productos.svg"> Productos</a>
+                <div class="content">
+                    <a href="#" class="side-link"> <img src="/media/productos.svg"> Productos</a>
+                    <a href="#" class="side-link"> <img src="/media/productos.svg"> Proveedores</a>
+                    <a href="#" class="side-link"> <img src="/media/productos.svg"> Proveen</a>
+                    <a href="#" class="side-link"> <img src="/media/productos.svg"> Productos solicitados</a>
+                </div>
+            </div>
 
-            <!--Operaciones/opciones restantes-->
+            <!--Compras-->
+            <div class="dropdown">
+                <a href="#" class="side-link"> <img src="/media/compras.svg"> Compras</a>
+                <div class="content">
+                    <a href="#" class="side-link"> <img src="/media/compras.svg"> Compras</a>
+                    <a href="#" class="side-link"> <img src="/media/compras.svg"> Facturas</a>
+                    <a href="#" class="side-link"> <img src="/media/compras.svg"> Linea de factura</a>
+                </div>
+            </div>
+            
+            <!--Animales-->
+            <div class="dropdown">
+                <a href="#" class="side-link"> <img src="/media/animales.svg"> Animales</a>
+                <div class="content">
+                    <a href="#" class="side-link"> <img src="/media/animales.svg"> Animales</a>
+                    <a href="#" class="side-link"> <img src="/media/animales.svg"> Historiales clinicos</a>
+                    <a href="#" class="side-link"> <img src="/media/animales.svg"> Carne de vacunaciones</a>
+                </div>
+            </div>
+
+
+            <!--Operaciones-->
             <label>OPERACIONES</label>
             <a href="#" class="side-link"> <img src="/media/servicios.svg"> Servicios</a>
             <a href="#" class="side-link"> <img src="/media/guarderia.svg"> Guardería</a>
             <a href="#" class="side-link"> <img src="/media/calendar.svg"> Agenda</a>
 
+
+            <!--Opciones del sistema-->
             <label>SISTEMA</label>
             <a href="#" class="side-link"> <img src="/media/backup.svg"> Copias de seguridad</a>
-            
+
         </nav>
 
-        <div class="aside-extreme">
-            <button> <img src="/media/logout.svg"> Cerrar sesion</button>
+        <div class="aside-bottom">
+            <a class="logout" href="#"> <img src="/media/logout.svg"> Cerrar sesion</a>
         </div>
 
     </aside>
 
+    
+
     <main>
         
-        
+        <header>
+            <label class="user-logo">Ff</label>
+        </header>
 
+        <iframe class="screen" frameborder="0"></iframe>
     </main>
 
     <script src="script.js"></script>

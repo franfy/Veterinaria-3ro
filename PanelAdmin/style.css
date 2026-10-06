@@ -1,5 +1,6 @@
 :root {
     --verde-oscuro: #1b331b;
+    --verde-oscuro-perfil: #163016;
     --verde-hover: #30773025;
     --verde-active: #30773067;
     --verde-border: #8ca014;
@@ -18,6 +19,15 @@
 
     --rojo-text: #e1a186;
     --rojo-button: #81432880;
+
+    /*Colores del sabia*/
+    --rojo-coral: #EF5846;
+
+    --verde-menta: #b2d8c0;
+
+    --marron-oscuro: #3e2712;
+
+    --negro: #000000;
 }
 
 body {
@@ -25,19 +35,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 
     background-color: var(--amarillo-background);
-
+    
     display: flex;
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     
-    /*flex: 1;*/
     min-width: 0;
-
-    /*display: flex;*/
-    /*align-items: center;     centra verticalmente */
-    /*justify-content: center; centra horizontalmente*/
-
     min-height: 100vh;
 }
 
@@ -63,111 +70,150 @@ aside nav {
     border-bottom: 1px solid var(--ambar);
 }
 
-aside nav label {
+.aside-top {
+    margin: 0px 1rem 0px 1rem;
+
+    min-height: 6rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-bottom {
+    
+    min-height: 4rem;
+}
+
+.titulo {
+    font-size: 24px;
+    font-weight: bold;
+
+    margin-top: 0.8rem;
+
+    color: var(--gris-text);
+}
+
+.subtitulo {
+    font-size: 10px;
+    font-weight: bold;
+
+    color: var(--gris-oscuro-text);
+}
+
+nav label {
     font-size: 14px;
     font-weight: bold;
 
     color: var(--verde-text);
 
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 20px;
+    margin: 5px 0px 5px 20px;
+    /*arriba, derecha, abajo, izquierda*/
 }
 
-aside nav a {
+.side-link{
     font-size: 20px;
     text-decoration: none;
     font-weight: bold;
 
     color: var(--gris-text);
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 24px;
+    padding: 10px 0px 10px 24px;
+
+    transition: background-color 0.2s ease, border-left 0.2s ease;
 }
 
-aside div label {
-    display: flex;
-    /*justify-content: center;*/
-}
-
-aside nav a:hover {
+.side-link:hover {
     background-color: var(--verde-hover);
 }
 
-aside nav .active {
+.side-link img {
+    transform: translateY(3px);
+}
+
+.active {
     background-color: var(--verde-active);
     border-left: 5px solid var(--ambar);
 }
 
-aside .aside-extreme div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-aside nav a img {
-    transform: translateY(4px);
-}
-
-
-
-
-
-.aside-extreme {
-    margin-top: 12px ;
-    margin-bottom: 12px;
-    margin-left: 16px;
-    margin-right: 16px;
-
-
-    display: flex;
-    flex-direction: column;
-}
-
-.aside-extreme .titulo {
-    font-size: 24px;
-    color: var(--gris-text);
-}
-
-.aside-extreme .subtitulo {
-    font-size: 10px;
-    color: var(--gris-oscuro-text);
-}
-
-.aside-extreme label {
-    color: var(--blanco-text);
-}
-
-.aside-extreme button {
-    color: var(--rojo-text);
-    background-color: var(--rojo-button);
-
-    border-radius: 5px;
-    border: none;
-
-    padding-right: 63px;
-}
-
-.aside-extreme label, .aside-extreme button {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.aside-extreme button {
-    cursor: pointer;
-}
-
-aside .aside-extreme:last-child img {
-    transform: translateY(3px);
-}
-
-/*
 .dropdown {
     display: flex;
     flex-direction: column;
+}
 
-    border: 2px solid var(--verde-border);
+.side-link.active + .content {
+    display: flex;
+}
+
+.content {
+    display: none;
+    flex-direction: column;
+    
+    position: absolute;
+    transform: translateX(220px) translateY(5px);
+    min-width: 260px;
+
+    background-color: var(--verde-oscuro);
+    
+    border: 4px solid var(--verde-border);
+    border-radius: 15px;
+}
+
+.logout {
+    display: flex;
+    justify-content: center;
+
+    margin: 1rem 1rem;
+    padding: 5px 5px 5px 5px;
+
+    background-color: var(--rojo-button);
     border-radius: 5px;
-}*/
 
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--rojo-text);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+    align-items: center;
+    justify-content: end;
+
+    max-height: 6rem;
+    
+    background-color: var(--verde-oscuro);
+
+    border-left: 1px solid var(--ambar);
+    border-bottom: 1px solid var(--ambar);
+}
+
+.user-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--verde-text);
+    background-color: var(--verde-oscuro-perfil);
+
+    font-size: 40px;
+    font-weight: bold;
+
+    height: 80px;
+    width: 80px;
+
+    border-radius: 50%;
+
+    margin-right: 7px;
+}
+
+
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+}
