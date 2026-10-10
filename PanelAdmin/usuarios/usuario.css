@@ -1,0 +1,243 @@
+:root {
+    --gris-separator: #777777;
+
+    --ambar: #ffbf00;
+    --ambar-hover: #ffe367;
+    --ambar-active: #ffbf00;
+
+    --verde-btn-menta: #b2d8bd;
+    --verde-btn-hover: #48ff70;
+    --verde-btn-active: #8faa99;
+
+    --negro-text: #404040;
+    --negro-text-active: #000000;
+
+    --rojo-tabla-active: #8b2622;
+    --rojo-tabla-hover: #ad2f23;
+    --rojo-tabla-eliminar: #ff4433;
+    --rojo-tabla: #ef574690;
+    --rojo-tabla-row: #b1342690;
+}
+
+.tools {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: var(--rojo-tabla);
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+    padding: 10px;
+    margin-bottom: 1rem;
+
+    border-radius: 15px;
+}
+
+.btnCrear {
+    background-color: var(--verde-btn-menta);
+
+    height: 3rem;
+
+    color: var(--negro-text);
+
+    font-size: large;
+    font-weight: bold;
+
+    border-radius: 15px;
+    border: 4px solid transparent;
+
+    transition: border 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.btnCrear:hover {
+    border: 4px solid var(--verde-btn-hover);
+}
+
+.btnCrear:active {
+    background-color: var(--verde-btn-active);
+    border: 4px solid var(--verde-btn-active);
+    color: var(--negro-text-active);
+}
+
+.btnEliminar {
+    width: 2.2rem;
+
+    margin-left: 0.5rem;
+
+    border: 3.5px solid transparent;
+    border-radius: 7px;
+
+    background-color: var(--rojo-tabla-eliminar);
+
+    cursor: pointer;
+
+    transition: border 0.2s ease, background-color 0.2s ease;
+}
+
+.btnEliminar:hover {
+    border: 3.5px solid var(--rojo-tabla-hover);
+}
+
+.btnEliminar:active {
+    background-color: var(--rojo-tabla-active);
+    border: 3.5px solid var(--rojo-tabla-active);
+}
+
+.btnEliminar img {
+    transform: translateX(-3.5px) translateY(1px);
+}
+
+.btnEditar {
+    width: 2.2rem;
+
+    margin-left: 0.5rem;
+
+    border: 3.5px solid transparent;
+    border-radius: 7px;
+
+    background-color: var(--ambar);
+
+    cursor: pointer;
+
+    transition: border 0.2s ease, background-color 0.2s ease;
+}
+
+.btnEditar:hover {
+    border: 3.5px solid var(--ambar-hover);
+}
+
+.btnEditar:active {
+    background-color: var(--ambar-active);
+    border: 3.5px solid var(--ambar-active);
+}
+
+.btnEditar img {
+    transform: translateX(-3.5px) translateY(1px);
+}
+
+.filtro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 0rem 1rem;
+
+    background-color: var(--verde-btn-menta);
+    border-radius: 15px;
+}
+
+select {
+    margin-right: 0.5rem;
+    padding: 0.3rem;
+
+    background-color: var(--verde-btn-menta);
+
+    border: none;
+
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.input-box {
+    position: relative;
+
+    transform: translateY(4px);
+
+    margin: 0.9rem 0.5rem 0.4rem;
+}
+
+.input-box input {
+    height: 1.2rem;
+
+    background-color: transparent;
+
+    margin-right: 0.5rem;
+
+    border: 1px solid transparent;
+    border-bottom: 2px solid var(--ambar);
+
+    text-align: start;
+    font-size: large;
+}
+
+.input-box label {
+    position: absolute;
+    left: 0.15rem;
+    transform: translateY(1px);
+    transform-origin: left center;
+    transition: transform 0.2s, color 0.2s ease;
+
+    font-size: large;
+
+    pointer-events: none;
+}
+
+.input-box img {
+    position: absolute;
+    right: 0.7rem;
+    transform: translateY(-1px);
+    transform-origin: right center;
+    transition: transform 0.2s, filter 0.2s;
+
+    filter: invert(100%);
+
+    pointer-events: none;
+}
+
+/*Inicio claude*/
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    transform: translateY(-1.1rem) scale(0.7);
+    color: var(--negro-text);
+}
+
+.input-box input:focus ~ img,
+.input-box input:not(:placeholder-shown) ~ img {
+    transform: translateY(-1.1rem) scale(0.7);
+    filter: invert(75%);
+}
+/*Fin Claude*/
+
+.container-table {
+    padding: 10px;
+
+    max-height: 80%;
+
+    overflow-y: auto;
+    overflow-x: auto;
+
+    scrollbar-width: auto;
+    scrollbar-color: var(--ambar) transparent;
+
+    background-color: var(--rojo-tabla);
+    border-radius: 15px;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px 15px;
+}
+
+th {
+    border-bottom: 2px solid var(--gris-separator);
+
+    font-size: large;
+    text-align: left;
+}
+
+tr:nth-last-of-type(2n) {
+    background-color: var(--rojo-tabla-row);
+}
+
+.alta-usuario {
+    display: none;
+    flex: 1;
+    min-height: 0;
+}

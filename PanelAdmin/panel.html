@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="panel.css">
+    <title>Panel de administrador</title>
+</head>
+
+
+
+<body>
+    
+    <aside>
+
+        <div class="aside-top">
+            <label class="titulo">Panel de administración</label>
+            <label class="subtitulo">Veterinaria el Sabia</label>
+        </div>
+
+        <nav>
+
+            <!--Bienvenida/inicio del panel de administrador-->
+            <label>BIENVENIDA</label>
+            <a href="inicio/inicio.html" class="side-link active"> <img src="/media/home.svg"> Inicio</a>
+          
+
+            <!--Dropdown menus-->
+            <!--Usuarios-->
+            <label>GESTION</label>
+            <div class="dropdown">
+                <a href="#" class="side-link"> <img src="/media/usuarios.svg"> Usuarios</a>
+                <div class="content">
+                    <a href="usuarios/usuario.html" class="side-link"> <img src="/media/usuarios.svg"> Usuarios</a>
+                    <a href="#" class="side-link"> <img src="/media/empleados.svg"> Empleados</a>
+                    <a href="#" class="side-link"> <img src="/media/usuarios.svg"> Clientes</a>
+                </div>
+            </div>
+
+            <!--Productos-->
+            <div class="dropdown">
+                <a href="#" class="side-link"> <img src="/media/productos.svg"> Productos</a>
+                <div class="content">
+                    <a href="productos/producto.html" class="side-link"> <img src="/media/productos.svg"> Productos</a>
+                    <a href="#" class="side-link"> <img src="/media/productos.svg"> Proveedores</a>
+                    <a href="#" class="side-link"> <img src="/media/productos.svg"> Proveen</a>
+                    <a href="#" class="side-link"> <img src="/media/productos.svg"> Productos solicitados</a>
+                </div>
+            </div>
+
+            <!--Compras-->
+            <div class="dropdown">
+                <a href="#" class="side-link"> <img src="/media/compras.svg"> Compras</a>
+                <div class="content">
+                    <a href="compras/compra.html" class="side-link"> <img src="/media/compras.svg"> Compras</a>
+                    <a href="#" class="side-link"> <img src="/media/compras.svg"> Facturas</a>
+                    <a href="#" class="side-link"> <img src="/media/compras.svg"> Linea de factura</a>
+                </div>
+            </div>
+            
+            <!--Animales-->
+            <div class="dropdown">
+                <a href="#" class="side-link"> <img src="/media/animales.svg"> Animales</a>
+                <div class="content">
+                    <a href="animales/animal.html" class="side-link"> <img src="/media/animales.svg"> Animales</a>
+                    <a href="#" class="side-link"> <img src="/media/animales.svg"> Historiales clinicos</a>
+                    <a href="#" class="side-link"> <img src="/media/animales.svg"> Carne de vacunaciones</a>
+                </div>
+            </div>
+
+
+            <!--Operaciones-->
+            <label>OPERACIONES</label>
+            <a href="servicios/servicio.html" class="side-link"> <img src="/media/servicios.svg"> Servicios</a>
+            <a href="guarderia/guarderia.html" class="side-link"> <img src="/media/guarderia.svg"> Guardería</a>
+            <a href="agenda/agenda.html" class="side-link"> <img src="/media/calendar.svg"> Agenda</a>
+
+
+            <!--Opciones del sistema-->
+            <label>SISTEMA</label>
+            <a href="backup/backup.html" class="side-link"> <img src="/media/backup.svg"> Copias de seguridad</a>
+
+        </nav>
+
+        <div class="aside-bottom">
+            <a class="logout" href="/index.html"> <img src="/media/logout.svg"> Cerrar sesion</a>
+        </div>
+
+    </aside>
+
+    
+
+    <main>
+        
+        <header>
+            <img src="/media/logo-notext.png"> 
+            <label class="user-logo">Ff</label>
+        </header>
+
+        <div class="screen"></div>
+    </main>
+
+    <script src="panel.js"></script>
+</body>
+</html>
